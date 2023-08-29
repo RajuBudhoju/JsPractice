@@ -18,18 +18,18 @@
 // document.all[10].textContent = "Hello"; // but its not good method because 10 index sometimes changes
 
 // GETELEMENT BY ID//
-var headerTitle = document.getElementById('header-title');
+// var headerTitle = document.getElementById('header-title');
 // headerTitle.textContent = 'Hello';
 // headerTitle.innerText = 'GoodBye';
 //what is the difference between abouve 2 line?
 //textContent shows the span dispaly: none things also, where as innerText doesn't
 
 //can change styles also
-headerTitle.style.borderBottom = 'solid 3px #000';
-var addItemsHeader = document.querySelector("#main .title");
+// headerTitle.style.borderBottom = 'solid 3px #000';
+// var addItemsHeader = document.querySelector("#main .title");
 
-addItemsHeader.style.color = "green";
-addItemsHeader.style.fontWeight = "bold";
+// addItemsHeader.style.color = "green";
+// addItemsHeader.style.fontWeight = "bold";
 
 
 
@@ -56,16 +56,16 @@ addItemsHeader.style.fontWeight = "bold";
 
 
 // //GET ELEMENT BY TAG NAME
-// var li = document.getElementsByTagName('list-group-item');
-// console.log(li);
-// li[1].textContent = 'Hello 2';
-// li[1].style.fontWeight = 'bold';
-// li[1].style.backgroundColor = 'yellow';
 
-// for (var i = 0; i < items.length; i++) {
-//     li[i].style.backgroundColor = 'grey';
 // }
 // //diff between class and tag is..it applies even though not there class
 
 
 //QUERY SELECTOR
+var addItemsHeader = document.getElementsByClassName('list-group-item');
+addItemsHeader[2].style.backgroundColor = 'green';
+
+for (var i = 0; i < addItemsHeader.length; i++) {
+    addItemsHeader[i].style.fontWeight = 'bold';
+}
+
