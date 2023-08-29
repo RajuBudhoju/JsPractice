@@ -59,15 +59,21 @@
 // //diff between class and tag is..it applies even though not there class
 
 
-//QUERY SELECTOR
-// var addItemsHeader = document.getElementsByClassName('list-group-item');
-// addItemsHeader[2].style.backgroundColor = 'green';
 
-// for (var i = 0; i < addItemsHeader.length; i++) {
-//     addItemsHeader[i].style.fontWeight = 'bold';
-// }
 
 var temp = document.getElementsByClassName('list-group-item');
 temp[1].style.backgroundColor = 'green';
 temp[2].classList.add("invisible");
 
+// QUERY SELECTOR
+var listItems = document.querySelectorAll(".list-group-item");
+
+// Add the "green-font" class to the 2nd item (index 1)
+listItems[0].classList.add("green-font");
+
+var oddItems = document.querySelectorAll(".list-group-item:nth-child(odd)");
+
+// Add the "odd-bg" class to odd elements
+oddItems.forEach(function (item) {
+    item.classList.add("odd-bg");
+});
