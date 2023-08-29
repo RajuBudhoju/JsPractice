@@ -43,17 +43,15 @@
 // addItemsHeader.style.fontWeight = "bold";
 
 
-//GET ELEMENT BY CLASSNAME
-// var items = document.getElementsByClassName('list-group-item');
-// console.log(items[1]);
-// items[1].textContent = 'Hello 2';
-// items[1].style.fontWeight = 'bold';
-// items[1].style.backgroundColor = 'yellow';
 
-// for (var i = 0; i < items.length; i++) {
-//     items[i].style.backgroundColor = 'grey';
-// }
 
+//GET ELEMENT BY TAGNAME
+var items = document.getElementsByTagName('li');
+items[4].textContent = "Changed";
+
+// GET ELEMENT BY CLASSNAME
+var items = document.getElementsByClassName('list-group-item');
+items[4].textContent = "ChangedAgain";
 
 // //GET ELEMENT BY TAG NAME
 
@@ -62,10 +60,10 @@
 
 
 //QUERY SELECTOR
-var addItemsHeader = document.getElementsByClassName('list-group-item');
-addItemsHeader[2].style.backgroundColor = 'green';
+// var addItemsHeader = document.getElementsByClassName('list-group-item');
+// addItemsHeader[2].style.backgroundColor = 'green';
 
-for (var i = 0; i < addItemsHeader.length; i++) {
-    addItemsHeader[i].style.fontWeight = 'bold';
-}
+// for (var i = 0; i < addItemsHeader.length; i++) {
+//     addItemsHeader[i].style.fontWeight = 'bold';
+// }
 
