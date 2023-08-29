@@ -46,12 +46,12 @@
 
 
 //GET ELEMENT BY TAGNAME
-var items = document.getElementsByTagName('li');
-items[4].textContent = "Changed";
+// var items = document.getElementsByTagName('li');
+// items[4].textContent = "Changed";
 
-// GET ELEMENT BY CLASSNAME
-var items = document.getElementsByClassName('list-group-item');
-items[4].textContent = "ChangedAgain";
+// // GET ELEMENT BY CLASSNAME
+// var items = document.getElementsByClassName('list-group-item');
+// items[4].textContent = "ChangedAgain";
 
 // //GET ELEMENT BY TAG NAME
 
@@ -66,4 +66,8 @@ items[4].textContent = "ChangedAgain";
 // for (var i = 0; i < addItemsHeader.length; i++) {
 //     addItemsHeader[i].style.fontWeight = 'bold';
 // }
+
+var temp = document.getElementsByClassName('list-group-item');
+temp[1].style.backgroundColor = 'green';
+temp[2].classList.add("invisible");
 
