@@ -1,4 +1,4 @@
-//Examine the document object
+// Examine the document object
 // console.dir(document);
 
 /* acsessing */
@@ -61,19 +61,22 @@
 
 
 
-var temp = document.getElementsByClassName('list-group-item');
-temp[1].style.backgroundColor = 'green';
-temp[2].classList.add("invisible");
+// var temp = document.getElementsByClassName('list-group-item');
+// temp[1].style.backgroundColor = 'green';
+// temp[2].classList.add("invisible");
 
-// QUERY SELECTOR
-var listItems = document.querySelectorAll(".list-group-item");
+// // QUERY SELECTOR
+// var listItems = document.querySelectorAll(".list-group-item");
 
-// Add the "green-font" class to the 2nd item (index 1)
-listItems[0].classList.add("green-font");
+// // Add the "green-font" class to the 2nd item (index 1)
+// listItems[0].classList.add("green-font");
 
-var oddItems = document.querySelectorAll(".list-group-item:nth-child(odd)");
+// var oddItems = document.querySelectorAll(".list-group-item:nth-child(odd)");
 
-// Add the "odd-bg" class to odd elements
-oddItems.forEach(function (item) {
-    item.classList.add("odd-bg");
-});
+// // Add the "odd-bg" class to odd elements
+// oddItems.forEach(function (item) {
+//     item.classList.add("odd-bg");
+// });
+
+
+
