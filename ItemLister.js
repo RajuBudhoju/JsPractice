@@ -20,12 +20,17 @@ function addItem(e) {
     e.preventDefault();
     //get input value
     var newItem = document.getElementById('item').value;
+    var itemDescription = document.getElementById('itemDescription').value;
     //create element
     var li = document.createElement('li');
     //add class
     li.className = 'list-group-item';
     // add textnode with input value
-    li.appendChild(document.createTextNode(newItem));
+    var itemNameContainer = document.createElement('div');
+    itemNameContainer.className = 'd-flex justify-content-between align-items-center';
+    // add textnode with input values
+    itemNameContainer.appendChild(document.createTextNode(newItem + ' ' + itemDescription)); // Combine name and description
+    li.appendChild(itemNameContainer);
 
 
     //create del button
@@ -37,10 +42,11 @@ function addItem(e) {
 
     //Creating edit button
     var editBtn = document.createElement('button');
-    editBtn.className = 'btn btn-primary btn-sm float-right delete';
+    editBtn.className = 'btn btn-primary btn-sm float-right edit';
     editBtn.style.marginRight = '10px';
     editBtn.style.width = '53px'; // Set the width
-    editBtn.style.height = '38px'; // 
+    editBtn.style.height = '35px'; // 
+    editBtn.style.backgroundColor = 'green';
 
     editBtn.appendChild(document.createTextNode('Edit'));
     li.appendChild(editBtn);
@@ -78,6 +84,23 @@ function filterItems(e) {
 
 function editItem(e) {
     if (e.target.classList.contains('edit')) {
+        // Access the list item element
+        var listItem = e.target.closest('.list-group-item');
 
+        // Access the text content of the item name and description
+        var itemNameAndDescription = listItem.querySelector('div.d-flex').textContent.trim();
+
+        // Split the name and description using a space
+        var [itemName, itemDescription] = itemNameAndDescription.split(' ');
+
+        // Prompt the user to enter a new item description
+        var newDescription = prompt('Enter the new description:', itemDescription);
+
+        // If the user provided a new description, update the item's description
+        if (newDescription !== null) {
+            itemDescription = newDescription;
+            listItem.querySelector('div.d-flex').textContent = itemName + ' ' + itemDescription;
+        }
     }
 }
+
