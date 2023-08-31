@@ -21,6 +21,17 @@ function addItem(e) {
     //get input value
     var newItem = document.getElementById('item').value;
     var itemDescription = document.getElementById('itemDescription').value;
+
+    var userDetails = {
+        itemName: newItem,
+        itemDescription: itemDescription
+    };
+
+    storedUserData = JSON.parse(localStorage.getItem('userDetails')) || [];
+
+    storedUserData.push(userDetails);
+
+    localStorage.setItem('userDetails', JSON.stringify(storedUserData));
     //create element
     var li = document.createElement('li');
     //add class
