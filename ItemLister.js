@@ -12,6 +12,9 @@ itemList.addEventListener('click', removeItem);
 //Filter event decalration
 filter.addEventListener('keyup', filterItems);
 
+//Edit item event declaration
+itemList.addEventListener('click', editItem);
+
 //Add item
 function addItem(e) {
     e.preventDefault();
@@ -27,13 +30,23 @@ function addItem(e) {
 
     //create del button
     var deleteBtn = document.createElement('button');
-
     deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
     //append text
     deleteBtn.appendChild(document.createTextNode('X'));
-
     li.appendChild(deleteBtn);
+
+    //Creating edit button
+    var editBtn = document.createElement('button');
+    editBtn.className = 'btn btn-primary btn-sm float-right delete';
+    editBtn.style.marginRight = '10px';
+    editBtn.style.width = '53px'; // Set the width
+    editBtn.style.height = '38px'; // 
+
+    editBtn.appendChild(document.createTextNode('Edit'));
+    li.appendChild(editBtn);
+
     itemList.appendChild(li);
+
 }
 
 function removeItem(e) {
@@ -63,3 +76,8 @@ function filterItems(e) {
     });
 }
 
+function editItem(e) {
+    if (e.target.classList.contains('edit')) {
+
+    }
+}
